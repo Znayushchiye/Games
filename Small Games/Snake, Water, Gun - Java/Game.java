@@ -44,6 +44,7 @@ public class Game {
       } else {
         System.out.println("It's a draw!");
       }
+      System.out.println();
       gameCount--;
     }
     System.out.println("\n");
