@@ -9,6 +9,7 @@ This repository is a collection of all the games that I have created in various 
   The game logic and input cleaning is done in separate files and linked to the main game file for cleanliness. In the future, I am planning on adding an AI based mechanism to include a singleplayer
   playthrough with Comp v Human. </p>
 </details>
+
 <details>
   <summary> <H3> <i> Conway's Game of Life: </i> </H3> </summary>
   <p> This is my interpretation of the Game of Life developed by John Conway. To know more about the game and how it works, click <a href="https://www.youtube.com/watch?v=ouipbDkwHWA"> here </a>. <br><br>
@@ -17,8 +18,17 @@ This repository is a collection of all the games that I have created in various 
   I am planning to add a graphical interface in the future so that the game mechanics can be more beautifully looked at and interacted with. </p>
 </details>
 
-### - _Snake Game:_
+<details>
+  <summary> <H3> <i> Snake Game: </i> </H3> </summary>
+  <p> </p>
+</details>
 
-### - _Tic Tac Toe (Minimax):_
+<details>
+  <summary> <H3> <i> Tic Tac Toe (Minimax): </i> </H3> </summary>
+  <p> </p>
+</details>
 
-### - _Other Small Games:_
+<details>
+  <summary> <H3> <i> Other Small Games: </i> </H3> </summary>
+  <p> </p>
+</details>
