@@ -1,18 +1,6 @@
-#include <iostream>
+#include "../Header Files/ChessPieces.h"
 #define cout std::cout
 #define cin std::cin
-#define string std::string
-class ChessPieces
-{
-protected:
-   bool pawn(string, string, int **, int);
-   bool pawn(string, string, int, int **);
-   bool rook(string, string, int **, int);
-   bool bishop(string, string, int **, int);
-   bool knight(string, string, int **, int);
-   bool king(string, string, int **, int);
-   bool queen(string, string, int **, int);
-};
 
 bool ChessPieces::pawn(string from, string to, int **board, int turn) // Double Step
 {

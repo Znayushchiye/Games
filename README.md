@@ -5,7 +5,7 @@ This repository is a collection of all the games that I have created in various 
 <details>
   <summary> <H3> <i> Chess: </i> </H3> </summary>
   <p> I developed a fully functional console based 2 players Chess game in C++ with the traditional rules and logic. The game keeps the track of all the chess pieces with a Hash Map and the board with a 2D 
-  integer array. The White pieces are numbered +ively and the Black pieces are numbered -ively for their easier control and manipulation. <br><br>
+  integer array. The White pieces are numbered positively and the Black pieces are numbered negatively for their easier control and manipulation. <br><br>
   The game logic and input cleaning is done in separate files and linked to the main game file for cleanliness. In the future, I am planning on adding an AI based mechanism to include a singleplayer
   playthrough with Comp v Human. </p>
   <img src="https://images.chesscomfiles.com/uploads/v1/images_users/tiny_mce/SamCopeland/phpuTejFE.gif" alt="Chess" width="200px">

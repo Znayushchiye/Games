@@ -1,15 +1,6 @@
-#include <unordered_map>
+#include "../Header Files/Valid.h"
 #include "ChessPieces.cpp"
-#define map unordered_map
-class Valid : public ChessPieces
-{
-protected:
-   string validPos(string);
-   int isValid(string &, int **, int);
-   bool isValid(string &, string, int **, int, int);
-   bool canMove(string, string, int **, int, int);
-   std::map<int, int> countpieces(int **);
-};
+
 string Valid::validPos(string str)
 {
    // Make all characters uppercase

@@ -1,15 +1,5 @@
-class Player1 : public Driver
-{
-protected:
-   int **board;
-   int turns;
+#include "../Header Files/Player1.h"
 
-public:
-   Player1(int **);
-   void setBoard(int **);
-   int **turn(int **);
-   bool hasWon();
-};
 Player1::Player1(int **board)
 {
    turns = 0;

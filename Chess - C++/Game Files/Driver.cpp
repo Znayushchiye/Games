@@ -1,10 +1,5 @@
+#include "../Header Files/Driver.h"
 #include "Valid.cpp"
-class Driver : public Valid
-{
-protected:
-   int **driver(int, int **, int);
-   int **move(string, string, int **);
-};
 
 int **Driver::driver(int turn, int **currentBoard, int turns)
 {

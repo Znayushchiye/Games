@@ -1,8 +1,8 @@
 #include <thread>
 #include <chrono>
-#include "./Game Files/Driver.cpp"
-#include "./Game Files/Player1.cpp"
-#include "./Game Files/Player2.cpp"
+#include "../Game Files/Driver.cpp"
+#include "../Game Files/Player1.cpp"
+#include "../Game Files/Player2.cpp"
 
 class Chess
 {
