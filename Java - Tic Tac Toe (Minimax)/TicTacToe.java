@@ -177,64 +177,60 @@ public class TicTacToe {
 
     try (Scanner scanner = new Scanner(System.in)) {
       char start = scanner.nextLine().toUpperCase().charAt(0);
-      if (start == 'Y') {
-        TicTacToe game = new TicTacToe();
-        char[] table = new char[] {
-          '1',
-          '2',
-          '3',
-          '4',
-          '5',
-          '6',
-          '7',
-          '8',
-          '9',
-        };
-        int count = 0;
-        do {
-          count++;
-          System.out.println("------------------------------------------");
-          System.out.println(
-            (count != 1) ? ("  Current Table:\n") : ("  Game start\n")
-          );
-          game.printTable(table);
-          int choice;
-          boolean flag;
-          do {
-            flag = false;
-            System.out.print("\nEnter your choice : ");
-            choice = scanner.nextInt();
-            if (choice < 1 || choice > 9) {
-              System.out.println("\nWrong choice! Enter again.");
-              flag = true;
-            } else if (game.alreadyTaken(table, choice - 1)) {
-              System.out.println("\nPosition already taken! Enter again.");
-              flag = true;
-            }
-          } while (flag);
-          table = game.humanTurn(table, choice).clone();
-          if (game.isTerminalState(table)) {
-            System.out.println("------------------------------------------");
-            break;
-          }
-          table = game.computerTurn(table).clone();
-        } while (!game.hasWon(table));
-        System.out.println("------------------------------------------");
-        System.out.println("\n  Final Table:\n");
-        game.printTable(table);
-        int winner = game.winParty(table);
-        if (winner == 'X') {
-          System.out.println("\nCongratulations! You win the match! :-D");
-        } else if (winner == 'O') {
-          System.out.println("\nYou lost the game :-(");
-        } else {
-          System.out.println("\nMatch tied.");
-        }
-        System.out.println("------------------------------------------");
-      } else {
+      if (start != 'Y') {
         System.out.println("Fin.");
         System.out.println("------------------------------------------");
+        System.exit(0);
       }
+      TicTacToe game = new TicTacToe();
+      char[] table = new char[] { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+      int count = 0;
+      do {
+        count++;
+        System.out.println("------------------------------------------");
+        System.out.println(
+          (count != 1) ? ("  Current Table:\n") : ("  Game start\n")
+        );
+        game.printTable(table);
+        char choice;
+        boolean flag;
+        do {
+          flag = false;
+          System.out.print("\nEnter your choice : ");
+          choice = scanner.nextLine().trim().toUpperCase().charAt(0);
+          if (choice == 'Q') {
+            System.out.println("Exiting...");
+            System.out.println("------------------------------------------");
+            System.exit(0);
+          }
+          choice -= '0';
+          if (choice < 1 || choice > 9) {
+            System.out.println("\nWrong choice! Enter again.");
+            flag = true;
+          } else if (game.alreadyTaken(table, choice - 1)) {
+            System.out.println("\nPosition already taken! Enter again.");
+            flag = true;
+          }
+        } while (flag);
+        table = game.humanTurn(table, choice).clone();
+        if (game.isTerminalState(table)) {
+          System.out.println("------------------------------------------");
+          break;
+        }
+        table = game.computerTurn(table).clone();
+      } while (!game.hasWon(table));
+      System.out.println("------------------------------------------");
+      System.out.println("\n  Final Table:\n");
+      game.printTable(table);
+      int winner = game.winParty(table);
+      if (winner == 'X') {
+        System.out.println("\nCongratulations! You win the match! :-D");
+      } else if (winner == 'O') {
+        System.out.println("\nYou lost the game :-(");
+      } else {
+        System.out.println("\nMatch tied.");
+      }
+      System.out.println("------------------------------------------");
     }
   }
 }
